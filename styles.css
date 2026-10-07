@@ -121,3 +121,29 @@ body{background:#f2dca8}
   .nav>.mobileMenu{display:none !important}
   .nav>nav#mainNav{display:flex !important}
 }
+
+/* GitHub Pages mobile navigation stacking fix */
+.nav{
+  position:sticky !important;
+  top:0;
+  z-index:10000 !important;
+  overflow:visible !important;
+  isolation:isolate;
+}
+.mobileMenu{
+  position:relative !important;
+  z-index:10001 !important;
+}
+.mobileMenuPanel{
+  z-index:10002 !important;
+}
+.hero{
+  z-index:2 !important;
+}
+@media(max-width:950px){
+  .mobileMenuPanel{
+    position:absolute !important;
+    top:54px !important;
+    right:0 !important;
+  }
+}
