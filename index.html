@@ -1,27 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bean & Bloom Café</title><meta name="description" content="Bean & Bloom — good coffee, fresh bites, brighter days."><link rel="stylesheet" href="styles.css"></head>
-<body><div class="watermark"></div><header class="nav"><a class="brand" href="#home"><img src="logo.png" alt="Bean & Bloom logo"><span>Bean & Bloom</span></a><button class="menuBtn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-controls="mainNav" aria-expanded="false">☰</button><nav id="mainNav"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">The Bean &amp; Bloom Way</a><a href="#contact">Visit Us</a><a class="pill" href="order.html">Quick Order</a></nav></header>
+<body><div class="watermark"></div><header class="nav"><a class="brand" href="#home"><img src="logo.png" alt="Bean & Bloom logo"><span>Bean & Bloom</span></a><details class="mobileMenu"><summary aria-label="Open navigation menu">☰</summary><div class="mobileMenuPanel"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">The Bean &amp; Bloom Way</a><a href="#contact">Visit Us</a><a class="pill" href="order.html">Quick Order</a></div></details><nav id="mainNav"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">The Bean &amp; Bloom Way</a><a href="#contact">Visit Us</a><a class="pill" href="order.html">Quick Order</a></nav></header>
 <main><section class="hero" id="home"><div class="heroStage"><img class="heroImg" src="hero.png" alt="Bean & Bloom café interior, coffee and pastries"></div><div class="heroShade"></div><div class="heroCopy"><span class="eyebrow">NEIGHBORHOOD CAFÉ · DAILY 7–7</span><h1 class="heroBrand">Bean <span>&amp;</span> Bloom</h1><p class="heroTagline">Good coffee · Fresh bites · Brighter days</p><p>A warm little corner for thoughtful coffee, fresh bites and easy moments.</p><div class="actions"><a class="cta" href="#menu">Explore our menu →</a><a class="ghost" href="#about">Our story</a></div></div><div class="coffeeSteam" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="floatCard"><span>Today’s pairing</span><strong>Latte + Croissant</strong><b>$8.49</b></div></section>
 <section class="marquee"><div>GOOD COFFEE ✦ FRESH BITES ✦ WARM SERVICE ✦ FREE WI-FI ✦ DINE-IN & TAKEOUT ✦ GOOD COFFEE ✦ FRESH BITES ✦</div></section>
 <section class="intro" id="about"><div><span class="eyebrow dark">WELCOME IN</span><h2>A small café with a <em>big sense of comfort.</em></h2></div><p>Bean & Bloom Café is designed as a welcoming neighborhood café with a focused menu, fast service, comfortable seating and a warm modern identity. Settle in, meet a friend, get some work done—or simply take your coffee to go.</p></section>
 <section class="menuSection" id="menu"><div class="sectionHead"><div><span class="eyebrow dark">FRESHLY MADE</span><h2>Find your favorite.</h2></div><div class="filters"><button class="active" data-filter="All">All</button><button data-filter="Coffee">Coffee</button><button data-filter="Cold Drinks">Cold</button><button data-filter="Breakfast">Breakfast</button><button data-filter="Bakery">Bakery</button><button data-filter="Lunch">Lunch</button><button data-filter="Dessert">Dessert</button></div></div><div class="menuGrid" id="menuGrid"></div></section>
 <section class="feature"><div class="featureText"><span class="eyebrow">THE BEAN & BLOOM WAY</span><h2>Made for your everyday ritual.</h2><p>From the first pour to the last crumb, our menu keeps things simple, fresh and satisfying.</p><div class="stats"><div><b>7–7</b><span>Open daily</span></div><div><b>14</b><span>Focused favorites</span></div><div><b>∞</b><span>Good moments</span></div></div></div><div class="stack"><img src="coffee-latte.png" alt="Caffè latte"><img src="butter-croissant.png" alt="Butter croissant"></div></section>
 <section class="contact" id="contact"><div><span class="eyebrow">COME SAY HELLO</span><h2>Your neighborhood cup is waiting.</h2><p>Daily, 7:00 AM – 7:00 PM<br>Dine-in & Takeout · Free Wi-Fi</p></div><div class="contactCard"><a href="tel:+15550102026"><small>PHONE</small><strong>(555) 010-2026</strong></a><a href="mailto:hello@beanandbloom.example"><small>EMAIL</small><strong>hello@beanandbloom.example</strong></a></div></section></main>
-<footer><div class="footerBrand"><img src="logo.png" alt=""><span>Bean & Bloom Café</span></div><p>Good coffee · Fresh bites · Brighter days</p><p>© <span id="year"></span> Bean & Bloom</p></footer><div class="toast" id="toast">Added to your order</div><script src="script.js"></script>
-<script>
-(function(){
-  var btn=document.getElementById('menuBtn');
-  var nav=document.getElementById('mainNav');
-  if(!btn||!nav) return;
-  function setOpen(open){
-    nav.classList.toggle('open',open);
-    btn.setAttribute('aria-expanded',open?'true':'false');
-    btn.textContent='☰';
-  }
-  btn.addEventListener('click',function(e){
-    e.preventDefault(); e.stopPropagation();
-    setOpen(!nav.classList.contains('open'));
-  });
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
-  document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==btn)setOpen(false);});
-})();
-</script></body></html>
+<footer><div class="footerBrand"><img src="logo.png" alt=""><span>Bean & Bloom Café</span></div><p>Good coffee · Fresh bites · Brighter days</p><p>© <span id="year"></span> Bean & Bloom</p></footer><div class="toast" id="toast">Added to your order</div><script src="script.js"></script></body></html>
